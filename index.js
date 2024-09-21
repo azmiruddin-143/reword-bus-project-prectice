@@ -1,34 +1,46 @@
 
-
-let buttons = document.querySelectorAll(".btn");
+let buttons = document.querySelectorAll(".btnn");
 let totalPrice = 0;
 let manplush = 0;
 let manmaynas = 40;
-let smallclick = 0; 
-let bigclick = 4; 
-let maxPrice = 2200; 
+let smallclick = 0;
+let bigclick = 4;
+let maxPrice = 2200;
 
-for (let btn of buttons) {
-    btn.addEventListener("click", function () {
+
+
+for (let btnn of buttons) {
+    btnn.addEventListener("click", function () {
+
         if (smallclick >= bigclick || totalPrice >= maxPrice) {
-            if(btn.style.background === "blue"){
+            if (btnn.style.background === "blue") {
+
                 alert("Alredy boking");
                 return;
             }
-            else{
-                alert("Apnar ar seat nite parben na")
+
+            else {
+
+                alert("Apnar ar seat nite parben na");
                 return;
             }
         }
 
-        if(btn.style.background === "blue"){
+        if (btnn.style.background === "blue") {
+
             alert("Alredy boking");
             return;
         }
 
+        if (totalPrice >= 1650) {
+            document.getElementById("copun-input").removeAttribute("disabled")
+            document.getElementById("copun-button").removeAttribute("disabled")
 
-        btn.style.background = "blue"
-        let buttonText = btn.innerText;
+        }
+
+
+        btnn.style.background = "blue"
+        let buttonText = btnn.innerText;
         let price = 550;
         let div = document.createElement("div");
         div.innerHTML = `
@@ -43,7 +55,7 @@ for (let btn of buttons) {
         document.getElementById("title").classList.add("hidden")
         document.getElementById("seat-price").appendChild(div);
         totalPrice += price;
-        document.getElementById("ticet-total").innerText = totalPrice;
+        document.getElementById("ticet-total").innerText = totalPrice.toFixed(2);
 
 
         //  seat-plush button
@@ -58,3 +70,63 @@ for (let btn of buttons) {
 
     });
 }
+
+
+// .................cuopt function.......................hfghb................
+
+document.getElementById("copun-button").addEventListener("click", function () {
+
+    let copuninput = document.getElementById("copun-input");
+    let copuninputvalue = copuninput.value;
+
+    if (copuninputvalue === "NEW 50%") {
+        let totalparsent = totalPrice * 20 / 100;
+        let totaldiscount = totalPrice - totalparsent;
+        document.getElementById("discount-total").innerText = totalparsent;
+        document.getElementById("discount-alltotal").innerText = totaldiscount.toFixed(2);
+        document.getElementById("discount-price").classList.remove("md:hidden")
+        document.getElementById("copun-form").classList.add("hidden")
+    }
+    // others sistyme
+    else if (copuninputvalue === "Couple 20%") {
+        let cupelparsent = totalPrice * 20 / 100;
+        let cupeltotaldiscount = totalPrice - cupelparsent;
+        document.getElementById("discount-total").innerText = cupelparsent;
+        document.getElementById("discount-alltotal").innerText = cupeltotaldiscount.toFixed(2);
+        document.getElementById("discount-price").classList.remove("md:hidden")
+        document.getElementById("copun-form").classList.add("hidden")
+    }
+    else {
+        alert("faild")
+    }
+
+})
+
+
+// .....form validation............................//
+document.getElementById("input-number").addEventListener("input", function () {
+    let inputnumber = document.getElementById("input-number");
+    let numbervalue = inputnumber.value;
+    if (numbervalue.length >= 11) {
+           document.getElementById("next-btn").removeAttribute("disabled")
+    }
+    
+    else if (numbervalue.length <= 10) {
+           document.getElementById("next-btn").setAttribute("disabled",true)
+    }
+    
+
+})
+
+
+// popup button//
+
+document.getElementById("next-btn").addEventListener("click", function(e){
+    e.preventDefault()
+    document.getElementById("popup-container").classList.remove("hidden")
+})
+
+document.getElementById("popup-btn").addEventListener("click", function(){
+    // document.getElementById("popup-container").classList.add("hidden")
+   window.location.reload();
+})

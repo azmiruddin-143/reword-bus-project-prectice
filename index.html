@@ -12,54 +12,70 @@
 
 <body>
 
-    <div id="header">
+    <div id="header" class="mt-16">
         <h1 class="text-3xl font-bold text-black text-center">Total Sets <span id="total-sets">40</span>
         </h1>
     </div>
 
 
-    <div id="main-part" class="flex">
+    <div id="main-part" class="flex m-auto">
 
         <div id="ticet-button" class="w-[40%]">
             <div class="flex gap-10 mt-10">
                 <h1>A</h1>
                 <div class="flex gap-10">
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">F2</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">C1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">F2</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">J1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">C3</button>
 
                 </div>
             </div>
 
 
             <div class="flex gap-10 mt-10">
-                <h1>A</h1>
+                <h1>B</h1>
                 <div class="flex gap-10">
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">D6</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">B1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">D2</button>
 
                 </div>
             </div>
             <div class="flex gap-10 mt-10">
-                <h1>A</h1>
+                <h1>C</h1>
                 <div class="flex gap-10">
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">B3</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">B1</button>
 
                 </div>
             </div>
             <div class="flex gap-10 mt-10">
-                <h1>A</h1>
+                <h1>D</h1>
                 <div class="flex gap-10">
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
-                    <button class="btn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">C6</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">H8</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">A1</button>
+                    <button
+                        class="btnn bg-red-600 px-10 py-4 font-bold text-white rounded-md hover:bg-black">H1</button>
 
                 </div>
             </div>
@@ -91,19 +107,108 @@
 
                 <!--  cupon code adad -->
 
-                <input type="text" placeholder="cupon code" class="input input-bordered join-item" disabled />
-                <button class=" bg-slate-50" disabled>Subscribe</button>
+
+                <div class="mt-8 mb-8" id="copun-form">
+                    <input id="copun-input" type="text" placeholder="cupon code"
+                        class="input input-bordered join-item w-[85%]" disabled />
+                    <button id="copun-button" class="btn bg-[blue] text-white" disabled>Subscribe</button>
+                </div>
+
+                <!-- discount price -->
+
+                <div id="discount-price" class="sm:flex justify-between pt-5 pb-5 md:hidden">
+                    <h1 class="text-2xl font-bold text-black">Discount</h1>
+                    <h1 class="text-2xl font-bold text-black">-BDT: <span id="discount-total"> ****</span></h1>
+                </div>
+                <hr>
+
+                <!-- discount total price -->
+
+                <div id="hi" class="flex justify-between pt-5 pb-5">
+                    <h1 class="text-2xl font-bold text-black">Grand Price</h1>
+                    <h1 class="text-2xl font-bold text-black">-BDT: <span id="discount-alltotal"> ****</span></h1>
+                </div>
+
+                <!-- formstart -->
+
+                <form class="card-body w-full p-0">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Passenger Name*</span>
+                        </label>
+                        <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full" />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Phone Number*</span>
+                        </label>
+                        <input id="input-number" type="text" placeholder="Enter Your phone number"
+                            class="input input-bordered w-full" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Email ID</span>
+                        </label>
+                        <input type="email" placeholder="Enter Your email iD" class="input input-bordered" />
+
+                    </div>
+                    <div class="form-control mt-6">
+                        <button id="next-btn" class="btn btn-primary" disabled>NEXT</button>
+                    </div>
+                </form>
 
 
+
+                <!-- form end -->
             </div>
+
+
+
         </div>
-
-
-
     </div>
 
 
 
+
+
+
+    <!-- Coupon code setup -->
+
+    <div id="copun-design" class="mt-16 mb-24 flex justify-around ">
+
+        <div class="space-y-5">
+            <h1 class="text-2xl text-black">Coupon Code</h1>
+            <h1 class="text-4xl font-bold text-black">
+
+                NEW 50%</h1>
+            <h1>Coupon Code</h1>
+        </div>
+
+        <div class="space-y-5">
+            <h1 class="text-2xl text-black">Secont coupon code</h1>
+            <h1 class="text-4xl font-bold text-black">
+                Couple 20% </h1>
+            <h1>Coupon Code</h1>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- popup -->
+
+    <div class="card bg-primary text-primary-content w-96 absolute top-[50%] left-[38%] hidden" id="popup-container">
+        <div class="card-body">
+            <h2 class="card-title">Card title!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions justify-end">
+                <button id="popup-btn" class="btn">Close Page</button>
+            </div>
+        </div>
+    </div>
 
 
 
